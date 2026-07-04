@@ -1,3 +1,4 @@
+cat > .github/workflows/deploy-to-minikube-github-actions.yaml << 'EOF'
 name: Deploy to Minikube using GitHub Actions
 
 on: [push]
@@ -30,3 +31,4 @@ jobs:
       run: |
           minikube service list
           minikube service nodejs-app --url
+EOF
